@@ -1,0 +1,30 @@
+Public address of the key:   0x129aEd70A9f764b5eFEB91DED7d5F0266D316442
+Path of the secret key file: C:\Users\hp\AppData\Local\Ethereum\keystore\UTC--2021-09-10T10-31-50.456760100Z--129aed70a9f764b5efeb91ded7d5f0266d316442
+
+Goerli account:
+Public address of the key:   0xe38BdBAE7777304f6f4391d508F8253223741237
+Path of the secret key file: C:\Users\hp\AppData\Local\Ethereum\goerli\keystore\UTC--2021-09-10T12-12-20.579910500Z--e38bdbae7777304f6f4391d508f8253223741237
+
+Get account Balance:
+curl -X POST http://localhost:8545 -H "Content-Type: application/json" --data {\"jsonrpc\":\"2.0\",\"method\":\"eth_getBalance\",\"params\":[\"0x35F18427567108F800BDC2784277B9246eED37fA\",\"latest\"],\"id\":1} 
+
+Query Accounts:
+curl -X POST http://localhost:8545 -H "Content-Type: application/json" --data {\"jsonrpc\":\"2.0\",\"method\":\"eth_accounts\",\"params\":[],\"id\":1}
+
+Query Gas Price:
+curl -X POST http://localhost:8545 -H "Content-Type: application/json" --data {\"jsonrpc\":\"2.0\",\"method\":\"eth_gasPrice\",\"params\":[],\"id\":1}
+
+
+Query No of Transactions of a block with hash:
+curl -X POST http://localhost:8545 -H "Content-Type: application/json" --data {\"jsonrpc\":\"2.0\",\"method\":\"eth_getBlockTransactionCountByHash\",\"params\":[\"0xe019dde137734ee91ab45fc9c614cc9d636f33ab42cc875df049d45428f870f3\"],\"id\":1}
+
+
+Query Transaction receipt wiht hash:
+curl -X POST http://localhost:8545 -H "Content-Type: application/json" --data {\"jsonrpc\":\"2.0\",\"method\":\"eth_getTransactionReceipt\",\"params\":[\"0x4210f581dda42ea2a2676fefa9edf784095a30ae2b49920e0965588d8fa78bf9\"],\"id\":1}
+
+Query Find no of peers:
+curl -X POST http://localhost:8545 -H "Content-Type: application/json" --data {\"jsonrpc\":\"2.0\",\"method\":\"admin.peers\",\"params\":[],\"id\":1}
+
+
+Find transaction hash by blockhash and index:
+curl -X POST http://localhost:8545 -H "Content-Type: application/json" --data {\"jsonrpc\":\"2.0\",\"method\":\"eth_getTransactionByBlockNumberAndIndex\",\"params\":[\"0x52a96a\",\"0x1\"],\"id\":1}

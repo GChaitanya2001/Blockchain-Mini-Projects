@@ -1,0 +1,4 @@
+geth --goerli --syncmode "light" --http --allow-insecure-unlock --unlock 0xe38BdBAE7777304f6f4391d508F8253223741237 --password "D:\Autumn 2021\CS61065_Theory_and_Applications_of_Blockchain\Assignments\Assignment_2\pwd.txt"
+
+
+curl -X POST http://localhost:8545 -H "Content-Type: application/json" --data {\"jsonrpc\":\"2.0\",\"method\":\"eth_getBalance\",\"params\":[\"0xe38BdBAE7777304f6f4391d508F8253223741237\",\"latest\"],\"id\":1} 
